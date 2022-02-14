@@ -1,0 +1,117 @@
+.accordion__item {
+  border-radius: 12px;
+  box-shadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.05);
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &.is-open {
+    .accordion__toggler {
+      padding-bottom: 4px;
+    }
+
+    .accordion__content {
+      display: block;
+    }
+
+    .accordion__toggler {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.accordion__toggler {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 56px 16px 20px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: hsl(0, 0%, 10%);
+  text-align: left;
+  background-color: transparent;
+  transition-property: color;
+  transition-duration: 0.2s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    right: 24px;
+    width: 12px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 12 8' fill='%23949494' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.29 1.29a.996.996 0 00-1.41 0L6 5.17 2.12 1.29A.996.996 0 10.71 2.7L5.3 7.29c.39.39 1.02.39 1.41 0L11.3 2.7c.38-.38.38-1.02-.01-1.41z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    transform-origin: center;
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+
+  &:hover {
+    color: hsl(0, 0%, 45%);
+  }
+
+  &:active {
+    color: hsl(0, 0%, 70%);
+  }
+}
+
+.accordion__title {
+  margin: 0;
+}
+
+.accordion__content {
+  display: none;
+}
+
+.accordion__body {
+  padding: 0 24px 20px;
+  font-size: 13px;
+  color: #949494;
+
+  p {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .accordion {
+    max-width: 996px;
+    margin: 0 auto;
+  }
+
+  .accordion__item {
+    border-radius: 14px;
+  }
+
+  .accordion__toggler {
+    padding: 18px 56px 18px 22px;
+    border-radius: 14px;
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .accordion__item {
+    border-radius: 16px;
+  }
+
+  .accordion__toggler {
+    padding: 20px 56px 20px 24px;
+    border-radius: 16px;
+    font-size: 20px;
+  }
+}

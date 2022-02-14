@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ pages[pageId].name }}</title>
+  <link rel="stylesheet" href="./css/libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/styles.min.css">
+  {# <link rel="icon" href="favicon.ico"> #}
+  {# <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml"> #}
+  {# <link rel="apple-touch-icon" href="favicons/apple.png"> #}
+  {# <link rel="manifest" href="manifest.webmanifest"> #}
+  <link rel="preload" href="./fonts/museo/museo-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/museo/museo-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/museo/museo-900.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body class="page__body ">
+
+	{# header #}
+
+  {% block main_content %}{% endblock %}
+
+	{# footer #}
+
+  <script src="./js/libs/svg4everybody.min.js"></script>
+  <script src="./js/libs/swiper-bundle.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

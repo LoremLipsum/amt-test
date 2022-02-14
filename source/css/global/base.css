@@ -1,0 +1,53 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  color: #1a1a1a;
+  font-family: "Museo", sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+}
+
+a:focus,
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #000000;
+}
+
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #000000;
+}
+
+a,
+button {
+  margin: 0;
+}

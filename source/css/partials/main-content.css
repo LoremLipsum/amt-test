@@ -1,0 +1,36 @@
+.main-content {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.main-content__section {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .main-content__section {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-content {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .main-content__section {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+}

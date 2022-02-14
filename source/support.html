@@ -1,0 +1,25 @@
+{% set pageId = 1 %}
+{% extends "./layouts/main.twig" %}
+{%- from "./views/support.twig" import support -%}
+{%- from "./views/socials.twig" import socials -%}
+{%- from "./views/faq.twig" import faq -%}
+{%- from "./views/accordion.twig" import accordion -%}
+
+{% block main_content %}
+<main class="main-content inner">
+
+	{{ support("main-content__section") }}
+
+	{{ socials("main-content__section", socialsData) }}
+
+	<section class="main-content__section section">
+		<h2 class="section__title">Часто задаваемые вопросы</h2>
+		{{ faq(faqData) }}
+	</section>
+
+	<section class="main-content__section section">
+		<h2 class="section__title">Справка</h2>
+		{{ accordion(accData) }}
+	</section>
+</main>
+{% endblock %}

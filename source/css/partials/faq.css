@@ -1,0 +1,141 @@
+.faq {
+  position: relative;
+  margin: -12px -20px -12px;
+  padding: 0 40px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 62px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translate3d(0, -50%, 0);
+
+    &--prev {
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
+  }
+}
+
+
+.faq__item {
+  padding: 12px;
+  transform: translate3d(0, 0, 0);
+}
+
+.faq__link {
+  display: block;
+  height: 160px;
+  padding: 15px 20px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #949494;
+  background-color: var(--white);
+  box-shadow: 0 0 24px 0 hsla(0deg, 0%, 0%, 0.05);
+}
+
+.faq__body {
+  height: 125px;
+  overflow: hidden;
+}
+
+.faq__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: hsl(0, 0%, 10%);
+}
+
+.faq__text {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #949494;
+}
+
+@media screen and (min-width: 640px) {
+  .faq {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .faq__item {
+    &:nth-child(odd) {
+      .faq__link {
+        padding-right: 120px;
+        background-repeat: no-repeat;
+        background-image: url("../img/faq/faq-bg@1x.png");
+        background-size: 104px 160px;
+        background-position: right top;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/faq/faq-bg@2x.png");
+          background-size: 104px 160px;
+        }
+      }
+    }
+  }
+
+  .faq__link {
+    border-radius: 14px;
+  }
+
+  .faq__title {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .faq {
+    margin: -12px;
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .slider-arrow {
+      &--prev {
+        left: 12px;
+      }
+
+      &--next {
+        right: 12px;
+      }
+    }
+  }
+
+  .faq__link {
+    border-radius: 16px;
+  }
+
+  .faq__title {
+    font-size: 20px;
+  }
+}

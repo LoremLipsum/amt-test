@@ -1,0 +1,23 @@
+{% macro faq(faqData) %}
+<div class="faq j-faq-slider swiper">
+	<div class="faq__list swiper-wrapper">
+		{% for faq in faqData %}
+			<div class="faq__item swiper-slide">
+				<a href="" class="faq__link">
+					<div class="faq__body">
+						<h3 class="faq__title">{{ faq.title }}</h3>
+						{% if faq.text %}
+							<p class="faq__text">{{ faq.text }}</p>
+						{% endif %}
+					</div>
+			</div>
+		{% endfor %}
+	</div>
+	<button class="slider-arrow slider-arrow--prev j-faq-prev">
+		<span class="sr-only">Предыдущий слайд</span>
+	</button>
+	<button class="slider-arrow slider-arrow--next j-faq-next">
+		<span class="sr-only">Следующий слайд</span>
+	</button>
+</div>
+{% endmacro %}

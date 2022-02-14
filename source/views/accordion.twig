@@ -1,0 +1,18 @@
+{% macro accordion(accData) %}
+	<div class="accordion">
+		{% for item in accData %}
+			<div class="accordion__item j-acc-item">
+				<h3 id="faq_heading_1" class="accordion__title">
+					<button class="accordion__toggler j-acc-togler" type="button" aria-expanded="false" aria-controls="faq_content_1">
+						{{ item.title }}
+					</button>
+				</h3>
+				<div id="faq_content_1" class="accordion__content" aria-labelledby="faq_heading_1">
+					<div class="accordion__body" >
+						<p>{{ item.text }}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endmacro %}

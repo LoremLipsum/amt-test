@@ -1,0 +1,14 @@
+{% set pageId = 0 %}
+{% extends "./layouts/main.twig" %}
+
+{% block main_content %}
+<main class="main-content inner">
+	<ul>
+		{% for page in pages %}
+			<li>
+				<a href="{{ page.href }}">{{ page.title }}</a>
+			</li>
+			{% endfor %}
+	</ul>
+</main>
+{% endblock %}

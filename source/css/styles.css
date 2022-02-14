@@ -1,0 +1,15 @@
+@import "global/fonts";
+/* @import "global/vars"; */
+@import "global/base";
+@import "partials/page";
+@import "partials/main-content";
+@import "partials/inner";
+@import "partials/sr-only";
+@import "partials/button";
+@import "partials/slider-arrow";
+@import "partials/article";
+@import "partials/section";
+@import "partials/topper";
+@import "partials/socials";
+@import "partials/faq";
+@import "partials/accordion";
