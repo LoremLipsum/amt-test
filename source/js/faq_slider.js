@@ -4,7 +4,7 @@
 
 	if (faqSlider[0]) {
 		var slider = new Swiper('.j-faq-slider', {
-			slidesPerView: 1,
+			slidesPerView: 4,
 			navigation: {
 				prevEl: '.j-faq-prev',
 				nextEl: '.j-faq-next',
@@ -12,15 +12,15 @@
 				disabledClass: 'disabled',
 			},
 			breakpoints: {
-				640: {
-					slidesPerView: 2
-				},
-				1024: {
+				1280: {
 					slidesPerView: 3
 				},
-				1280: {
-					slidesPerView: 4
+				1024: {
+					slidesPerView: 2
 				},
+				640: {
+					slidesPerView: 1
+				}
 			},
 		});
 	}

@@ -4,7 +4,7 @@
   "description": "",
   "devDependencies": {
     "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
+    "browser-sync": "2.23.x",
     "del": "6.0.0",
     "editorconfig-cli": "^0.3.0",
     "gulp": "4.0.2",
@@ -43,7 +43,7 @@
   "browserslist": [
     "last 2 versions",
     "not dead",
-    "not ie <= 10",
+    "IE 11",
     "not op_mini all"
   ],
   "editorconfig-cli": [
@@ -61,6 +61,6 @@
   "type": "module",
   "dependencies": {
     "svg4everybody": "^2.1.9",
-    "swiper": "5.3.0"
+    "swiper": "^4.4.1"
   }
 }

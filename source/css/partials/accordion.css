@@ -48,7 +48,7 @@
     width: 12px;
     height: 8px;
     background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 12 8' fill='%23949494' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.29 1.29a.996.996 0 00-1.41 0L6 5.17 2.12 1.29A.996.996 0 10.71 2.7L5.3 7.29c.39.39 1.02.39 1.41 0L11.3 2.7c.38-.38.38-1.02-.01-1.41z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 12 8' fill='%23949494' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.29 1.29a.996.996 0 00-1.41 0L6 5.17 2.12 1.29A.996.996 0 10.71 2.7L5.3 7.29c.39.39 1.02.39 1.41 0L11.3 2.7c.38-.38.38-1.02-.01-1.41z'/%3E%3C/svg%3E");
     background-size: contain;
     background-position: center;
     transform-origin: center;

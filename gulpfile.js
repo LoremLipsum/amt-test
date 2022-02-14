@@ -65,7 +65,7 @@ export function buildingStyles () {
 
 export function buildingLibStyles () {
 	return gulp.src([
-			"./node_modules/swiper/css/swiper.min.css"
+			"./node_modules/swiper/dist/css/swiper.min.css"
 		])
 		.pipe(postcss(() => ({
 			plugins: [
@@ -92,7 +92,7 @@ export function buildingScripts () {
 export function buildingLibScripts () {
 	return gulp.src([
 			"./node_modules/svg4everybody/dist/svg4everybody.min.js",
-			"./node_modules/swiper/js/swiper.min.js"
+			"./node_modules/swiper/dist/js/swiper.min.js"
 		])
 		.pipe(gulp.dest("./build/js/libs"));
 }
