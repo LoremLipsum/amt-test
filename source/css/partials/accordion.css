@@ -7,12 +7,9 @@
   }
 
   &.is-open {
-    .accordion__toggler {
-      padding-bottom: 4px;
-    }
-
     .accordion__content {
       display: block;
+      margin-top: -16px;
     }
 
     .accordion__toggler {
@@ -70,13 +67,17 @@
 }
 
 .accordion__content {
+  position: relative;
+  z-index: 1;
   display: none;
 }
 
 .accordion__body {
   padding: 0 24px 20px;
+  border-radius: 0 0 12px 12px;
   font-size: 13px;
   color: #949494;
+  background-color: #ffffff;
 
   p {
     margin: 0;
@@ -102,6 +103,10 @@
     border-radius: 14px;
     font-size: 19px;
   }
+
+  .accordion__body {
+    border-radius: 0 0 14px 14px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -113,5 +118,9 @@
     padding: 20px 56px 20px 24px;
     border-radius: 16px;
     font-size: 20px;
+  }
+
+  .accordion__body {
+    border-radius: 0 0 16px 16px;
   }
 }

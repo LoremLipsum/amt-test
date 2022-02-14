@@ -32,19 +32,20 @@ input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #000000;
+  outline: none;
+  box-shadow: 0 0 0 2px #1a1a1a;
 }
 
 a:focus:not(:focus-visible),
 input:focus:not(:focus-visible),
 button:focus:not(:focus-visible) {
-  outline: none;
+  box-shadow: none;
 }
 
 a:focus-visible,
 input:focus-visible,
 button:focus-visible {
-  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px solid #1a1a1a;
 }
 
 a,
