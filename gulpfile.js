@@ -8,8 +8,10 @@ import squoosh from "gulp-libsquoosh";
 import plumber from "gulp-plumber";
 import rename from "gulp-rename";
 import svgSprite from "gulp-svg-sprite";
+import svgstore from 'gulp-svgstore';
 import terser from "gulp-terser";
 import twig from "gulp-twig";
+import uglify from "gulp-uglify";
 import { htmlValidator } from "gulp-w3c-html-validator";
 import postcss from "gulp-postcss";
 import postCsso from "postcss-csso";
@@ -63,15 +65,21 @@ export function buildingStyles () {
 
 export function buildingLibStyles () {
 	return gulp.src([
-			"./node_modules/swiper/swiper-bundle.min.css"
+			"./node_modules/swiper/css/swiper.min.css"
 		])
+		.pipe(postcss(() => ({
+			plugins: [
+				autoprefixer(),
+				postCsso()
+			],
+		})))
 		.pipe(gulp.dest("./build/css/libs/"));
 }
 
 export function buildingScripts () {
 	return gulp.src("./source/js/*.js")
 		.pipe(concat('scripts.js'))
-		.pipe(terser())
+		.pipe(uglify())
 		.pipe(
 			rename({
 				extname: ".min.js"
@@ -84,7 +92,7 @@ export function buildingScripts () {
 export function buildingLibScripts () {
 	return gulp.src([
 			"./node_modules/svg4everybody/dist/svg4everybody.min.js",
-			"./node_modules/swiper/swiper-bundle.min.js"
+			"./node_modules/swiper/js/swiper.min.js"
 		])
 		.pipe(gulp.dest("./build/js/libs"));
 }
@@ -120,16 +128,27 @@ export function createAvif () {
 		.pipe(gulp.dest("./build/img"))
 }
 
+// export function createSprite () {
+// 	return gulp.src("./source/icons/*.svg")
+// 		.pipe(svgSprite({
+// 			mode: {
+// 				stack: {
+// 					sprite: "../sprite.svg"
+// 				}
+// 			},
+// 		}
+// 		))
+// 		.pipe(rename("sprite.svg"))
+// 		.pipe(gulp.dest("./build/icons"));
+// }
+
 export function createSprite () {
 	return gulp.src("./source/icons/*.svg")
-		.pipe(svgSprite({
-			mode: {
-				stack: {
-					sprite: "../sprite.svg"
-				}
-			},
-		}
-		))
+		// .pipe(svgo())
+		.pipe(svgstore({
+			inlineSvg: true
+		}))
+		.pipe(rename('sprite.svg'))
 		.pipe(gulp.dest("./build/icons"));
 }
 
@@ -170,7 +189,7 @@ function reloadServer (done) {
 
 function watchFiles () {
 	gulp.watch("./source/css/**/*.css", gulp.series(buildingStyles));
-	gulp.watch("./source/scripts/**/*.js", gulp.series(buildingScripts, reloadServer));
+	gulp.watch("./source/js/**/*.js", gulp.series(buildingScripts, reloadServer));
 	gulp.watch(["./source/**/*.{html,twig}", "./source/data/data.js"], gulp.series(buildingViews, reloadServer));
 	gulp.watch("./source/icons/**/*.svg", gulp.series(createSprite, reloadServer));
 }

@@ -1,9 +1,9 @@
 (function() {
 
-	const faqSlider = document.querySelectorAll('.j-faq-slider');
+	var faqSlider = document.querySelectorAll('.j-faq-slider');
 
 	if (faqSlider[0]) {
-		const slider = new Swiper('.j-faq-slider', {
+		var slider = new Swiper('.j-faq-slider', {
 			slidesPerView: 1,
 			navigation: {
 				prevEl: '.j-faq-prev',

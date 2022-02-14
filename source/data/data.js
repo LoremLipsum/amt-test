@@ -1,7 +1,7 @@
 export default {
 	"pages": [
-    { "id": 1, "href": "support.html", "title": "Главная" },
-		{ "id": 2, "href": "article.html", "title": "Статья" },
+    { "id": 0, "href": "support.html", "title": "Главная" },
+		{ "id": 1, "href": "article.html", "title": "Статья" },
   ],
 	"socialsData": [
 		{ "id": "vk", "link": "", "name": "Вконтакте", "width": "26", "height": "14" },
