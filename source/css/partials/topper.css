@@ -84,8 +84,8 @@
     &--support {
       background-image: url("../img/support/support-bg.svg");
       background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      background-position: center bottom;
+      background-size: 100% auto;
     }
   }
 
