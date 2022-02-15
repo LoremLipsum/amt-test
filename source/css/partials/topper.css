@@ -82,9 +82,9 @@
     border-radius: 40px;
 
     &--support {
-      background-image: url("../img/support/support-bg.svg");
       background-repeat: no-repeat;
-      background-position: center bottom;
+      background-image: url("../img/support/support-bg.svg");
+      background-position: center 100%;
       background-size: 100% auto;
     }
   }
