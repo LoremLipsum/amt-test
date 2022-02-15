@@ -156,7 +156,7 @@ export function copyAssets (done) {
 	gulp.src([
 		"./source/fonts/**/*",
 		"./source/*.ico",
-		"./source/images/**/*.svg",
+		"./source/img/**/*.svg",
 		"./source/favicons/*",
 		"./source/*.webmanifest"
 	], {
